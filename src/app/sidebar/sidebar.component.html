@@ -1,0 +1,45 @@
+<div class="sidebar">
+    <aside class="desktop">
+        <div class="logo">
+            <a class="logo-link" href="https://developer.mastercard.com">
+                <img id="yellow-cog" src="https://stage.masterpass.com/hub/styles/images/logo-cog-yellow.svg" style="transform: rotate(-0deg);">
+                <img id="red-cog" src="https://stage.masterpass.com/hub/styles/images/logo-cog-red.svg" style="transform: rotate(0deg);">
+                <div id="logo-text">
+                    mastercard<br> developers
+                </div>
+            </a>
+        </div>
+        <div class="nav-secondary">
+            <a class="back-to-menu">
+                <span class="icon"></span>
+                <span class="ng-binding">Menu</span>
+            </a>
+            <div class="menu global-links">
+                <ul class="menu-level1">
+                    <li class="menu-level1-item">
+                        <a href="https://developer.mastercard.com/dashboard">
+                            <h4>My Projects</h4>
+                        </a>
+                    </li>
+                    <li class="menu-level1-item search">
+                        <a href="https://developer.mastercard.com/search">
+                            <span class="search-icon"></span>
+                            <span>Search</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+
+            <a class="page-title">Masterpass</a>
+
+            <div class="menu">
+                <ul class="menu-level1">
+                    <li class="menu-level1-item" *ngFor="let lnkdata of linksData">
+                        <h4 routerLinkActive="active" routerLink="{{ lnkdata.link }}">{{ lnkdata.title }}</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</div>
