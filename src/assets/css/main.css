@@ -4,7 +4,7 @@
  * body `font-size` is set using `em` units.
  */
 
-@import url("https://fast.../fonts.net/t/1.css?apiType=css&projectid=5c04f6d5-08e9-4bd0-a2ab-f54296897ab9");
+@import url("//fast.fonts.com/cssapi/3566c147-3f45-41ed-941c-cfe1528c243e.css");
 
 /* line 106, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 
@@ -9326,11 +9326,13 @@ tbody.collapse.in {
 
 /* Japanese ../fonts */
 
+
+/*
 @font-face {
     font-family: "hiragino-kaku-gothic";
     src: url("../fonts/hiragino-kaku-gothic-pro-w3/hiragino-kaku-gothic-pro-w3.otf");
     src: url("../fonts/hiragino-kaku-gothic-pro-w3/hiragino-kaku-gothic-pro-w3.otf") format("opentype");
-}
+}*/
 
 
 /**
@@ -9363,9 +9365,10 @@ body {
 
 /* line 1, ../sass/util/_japanese_font_variables.scss */
 
-body.japanese * {
+
+/*body.japanese * {
     font-family: "hiragino-kaku-gothic" !important;
-}
+}*/
 
 
 /* line 28, ../sass/partials/_base.scss */
@@ -10645,6 +10648,7 @@ p {
 /* line 80, ../sass/partials/modules/_accordion.scss */
 
 .accordion:first-child {
+    border-radius: 3px 3px 0 0;
     -moz-border-radius: 3px 3px 0 0;
     -webkit-border-radius: 3px 3px 0 0;
 }
@@ -10653,6 +10657,7 @@ p {
 /* line 85, ../sass/partials/modules/_accordion.scss */
 
 .accordion:last-child {
+    border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
     -webkit-border-radius: 0 0 3px 3px;
     border-bottom: solid 1px #e5e5e5;
@@ -12486,6 +12491,7 @@ iframe {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    border-radius: 3px 3px 0 0;
     -moz-border-radius: 3px 3px 0 0;
     -webkit-border-radius: 3px 3px 0 0;
 }
@@ -12502,6 +12508,7 @@ iframe {
 
 .customTable .tRow:last-of-type {
     border-bottom: solid 1px #f0eeeb;
+    border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
     -webkit-border-radius: 0 0 3px 3px;
 }
@@ -12570,6 +12577,7 @@ iframe {
 
 .customTable .tRow .expanded .form {
     margin-bottom: 30px;
+    border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
@@ -13250,7 +13258,7 @@ delete-popover .btn {
 
 .dropdownSelect .dropdownSelectMenu .twoCol {
     width: calc(16.67% - 6px);
-    display: inline;
+    display: block;
     float: left;
     margin: 0 3px;
 }
@@ -13260,7 +13268,7 @@ delete-popover .btn {
 
 .dropdownSelect .dropdownSelectMenu .sevenCol {
     width: calc(58.33% - 6px);
-    display: inline;
+    display: block;
     float: left;
     margin: 0 3px;
 }
@@ -13270,7 +13278,7 @@ delete-popover .btn {
 
 .dropdownSelect .dropdownSelectMenu .threeCol {
     width: calc(25% - 6px);
-    display: inline;
+    display: block;
     float: left;
     margin: 0 3px;
 }
@@ -14289,7 +14297,7 @@ body.home alert {
 #tabView .nav-tabs>li,
 #tabView .nav-pills>li {
     float: none;
-    display: inline-block;
+    display: block;
     zoom: 1;
 }
 
@@ -14377,7 +14385,6 @@ body.home alert {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    flex-align: flex-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     background: rgba(255, 255, 255, 0.8);
@@ -14553,7 +14560,6 @@ body.home alert {
 /* line 21, ../../modules/businessManagement/businessManagement.scss */
 
 .checkbox-wrapper label {
-    margin-top: 0px;
     display: inline;
 }
 
@@ -14879,7 +14885,7 @@ body.home #main #content {
 /* line 31, ../../modules/home/home.scss */
 
 body.home #landingArea header {
-    background-image: url("../../styles/images/homepage-header.jpg");
+    background-image: url("../images/homepage-header.jpg");
     background-position: bottom center;
     padding: 0 132px;
     height: 700px;
@@ -15864,7 +15870,6 @@ body.home #footer {
 .keyManagement2 .project-keys-section .project-key-list .project-key .project-key-container {
     display: flex;
     flex-direction: row;
-    flex-align: flex-start;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -15877,7 +15882,6 @@ body.home #footer {
 .keyManagement2 .project-keys-section .project-key-list .project-key .project-key-container .project-key-row {
     display: flex;
     flex-direction: row;
-    flex-align: flex-start;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -15892,7 +15896,6 @@ body.home #footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-align: center;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
@@ -15920,7 +15923,6 @@ body.home #footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-align: center;
     transition: all .3s ease-in-out;
 }
 
@@ -16174,23 +16176,6 @@ body.home #footer {
 
 
 /* line 1, ../../modules/merchantFileUpload/merchantFileUpload.scss */
-
-.merchantFileUpload {
-    /*.customTable .tHead {
-        display: table;
-        width: 100%;
-    }
-
-    .customTable .tHead .col {
-        display: table-cell;
-        height: 50px;
-        vertical-align: middle;
-    }
-
-    .customTable .tRow {
-        padding: 0 15px;
-    }*/
-}
 
 
 /* line 3, ../../modules/merchantFileUpload/merchantFileUpload.scss */
@@ -16849,13 +16834,6 @@ body.home #footer {
 }
 
 
-/* line 2, ../../modules/styleGuide/styleGuide.scss */
-
-.styleGuide {
-    /* overrides to hide the sidebar just for the Style Guide */
-}
-
-
 /* line 7, ../../modules/styleGuide/styleGuide.scss */
 
 .styleGuide #main .sidebar {
@@ -16878,16 +16856,6 @@ body.home #footer {
     display: block;
     margin: 3em auto;
     width: 100%;
-}
-
-
-/* line 24, ../../modules/styleGuide/styleGuide.scss */
-
-.styleGuide .swatches {
-    /* Foundational Greys */
-    /* Additional Greys */
-    /* Brand Colors */
-    /* Accent Colors */
 }
 
 
@@ -17726,5 +17694,5 @@ body.home #footer {
 
 .checkbox-wrapper label {
     margin-top: 0px;
-    display: inline;
+    display: inline-block;
 }
