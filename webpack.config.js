@@ -30,7 +30,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.ts', '.html', '.css']
+        extensions: ['*', '.js', '.ts', '.html', '.css']
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({

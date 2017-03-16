@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+const path = require('path');
+console.log( 'Path', path);
 
 @Component({
   // moduleId: module.id+'',
