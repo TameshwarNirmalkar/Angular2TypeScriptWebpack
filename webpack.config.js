@@ -11,17 +11,15 @@ var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 module.exports = {
     entry: {
         'app': './src/main.ts',
-        'polyfills': [
-            'core-js/es6',
-            'core-js/es7/reflect',
-            'zone.js/dist/zone'
-        ]
+        'polyfills': './src/polyfills.ts',
+        'vendor': './src/vendor.ts'
     },
     output: {
         path: BUILD_PATH,
         // filename: '[name].[hash].js',
         filename: '[name].bundle.js'
     },
+    target: "node",
     module: {
         loaders: [
             { test: /\.component.ts$/, loader: 'ts-loader!angular2-template-loader' },
@@ -32,7 +30,7 @@ module.exports = {
             { test: /\.css$/, exclude: helpers.root('src', 'app'), loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
             { test: /\.css$/, include: helpers.root('src', 'app'), loader: 'raw-loader' },
             { test: /\.(jpe?g$|gif|png)$/, loader: 'file-loader?name=assets/images/[name].[ext]?limit=1000' },
-            { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file-loader?name=assets/fonts/[name].[ext]' }
+            { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file-loader?name=[name].[ext]' }
         ]
     },
     resolve: {
@@ -40,7 +38,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'polyfills'
+            name: ['app', 'vendor', 'polyfills']
         }),
         new ExtractTextPlugin('assets/css/bundle.css'),
         new HtmlWebpackPlugin({
