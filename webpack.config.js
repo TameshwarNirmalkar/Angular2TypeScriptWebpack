@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var helpers = require('./config/helpers');
 
 var path = require('path');
 var ROOT_PATH = path.resolve(__dirname);
@@ -28,7 +29,8 @@ module.exports = {
             { test: /\.html$/, loader: 'raw-loader' },
             // { test: /\.css$/, loader: 'raw-loader' },
             // { test: /\.css$/, loader: 'style-loader!css-loader?file-loader?name=assets/css/[name].[ext]' },
-            { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
+            { test: /\.css$/, exclude: helpers.root('src', 'app'), loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
+            { test: /\.css$/, include: helpers.root('src', 'app'), loader: 'raw-loader' },
             { test: /\.(jpe?g$|gif|png)$/, loader: 'file-loader?name=assets/images/[name].[ext]?limit=1000' },
             { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file-loader?name=assets/fonts/[name].[ext]' }
         ]
