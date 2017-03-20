@@ -22,11 +22,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.component.ts$/, loader: 'ts!angular2-template' },
-            { test: /\.ts$/, exclude: /\.component.ts$/, loader: 'ts' },
-            { test: /\.html$/, loader: 'raw' },
-            { test: /\.css$/, loader: 'raw' },
-            { test: /\.(jpe?g$|gif|png)$/, loader: 'url?limit=10' }
+            { test: /\.component.ts$/, loader: 'ts-loader!angular2-template-loader' },
+            { test: /\.ts$/, exclude: /\.component.ts$/, loader: 'ts-loader' },
+            { test: /\.html$/, loader: 'raw-loader' },
+            { test: /\.css$/, loader: 'raw-loader' },
+            { test: /\.(jpe?g$|gif|png)$/, loader: 'url-loader?limit=10' }
         ]
     },
     resolve: {
